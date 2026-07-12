@@ -1,0 +1,74 @@
+/* Keep the captured captcha row at the live widget's fixed height. */
+html,
+body {
+  background: #fff !important;
+}
+
+.dynamic_theme_block .npf_cpt_new,
+.dynamic_theme_block .npf_cpt_new .cptImgBox.newCptImg {
+  height: 37px !important;
+  min-height: 37px !important;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1640px !important;
+  }
+
+  .navbar-brand img {
+    width: 100px !important;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 20px !important;
+  }
+
+  .lecnote h1,
+  .lecnote h2 {
+    font-size: 96px !important;
+    line-height: 1 !important;
+  }
+
+  .lecnote h1 {
+    max-width: 430px;
+  }
+
+  .lecnote h2 {
+    font-size: 136px !important;
+  }
+
+  .lecnote p {
+    max-width: 540px;
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+
+  .main_form .form-control,
+  .main_form select {
+    min-height: 45px !important;
+    font-size: 16px !important;
+  }
+
+  .main_form .form-heading {
+    font-size: 28px !important;
+  }
+}
+
+section[id] {
+  scroll-margin-top: 145px;
+}
+
+.campus-life {
+  width: 100% !important;
+}
+
+@media (max-width: 767px) {
+  section[id] {
+    scroll-margin-top: 70px;
+  }
+}
+
+#jkblseven {
+  display: flow-root !important;
+  height: auto !important;
+}
