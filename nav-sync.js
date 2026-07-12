@@ -61,12 +61,30 @@
     setActive(link.getAttribute('href').slice(1));
   }
 
+  function positionFromHash() {
+    var id = window.location.hash.slice(1);
+    var target = document.getElementById(id);
+    if (!target) return;
+    window.scrollTo({
+      top: Math.max(
+        0,
+        target.getBoundingClientRect().top + window.scrollY - headerHeight() - 8,
+      ),
+      behavior: 'auto',
+    });
+    requestSync();
+  }
+
   links.forEach(function (link) {
     link.addEventListener('click', goToSection);
   });
   window.addEventListener('scroll', requestSync, { passive: true });
   window.addEventListener('resize', requestSync);
-  window.addEventListener('load', requestSync);
+  window.addEventListener('load', function () {
+    requestSync();
+    if (window.location.hash) window.setTimeout(positionFromHash, 1200);
+  });
   window.addEventListener('popstate', requestSync);
   requestSync();
+  if (window.location.hash) window.setTimeout(positionFromHash, 1200);
 }());

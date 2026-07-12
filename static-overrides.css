@@ -10,7 +10,7 @@ body {
   min-height: 37px !important;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1800px) {
   .container {
     max-width: 1640px !important;
   }
